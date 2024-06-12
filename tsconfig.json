@@ -1,13 +1,53 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "jsx": "react-jsx",
     "strict": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@api/*": [
+        "src/common/api/*"
+      ],
+      "@components": [
+        "src/common/components/index"
+      ],
+      "@constants/*": [
+        "src/common/constants/*"
+      ],
+      "@hooks": [
+        "src/common/hooks/index"
+      ],
+      "@theme": [
+        "./src/common/theme/index"
+      ],
+      "@common/*": [
+        "src/common/*"
+      ],
+      "@modules/*": [
+        "src/modules/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
+      ],
+      "@redux/*": [
+        "src/redux/*"
+      ],
+      "@test/*": [
+        "test/*"
+      ],
+      "*": [
+        "./modules/*"
       ]
-    }
+    },
+    "esModuleInterop": true
   },
+  "exclude": [
+    "node_modules",
+    "babel.config.js"
+  ],
   "include": [
     "**/*.ts",
     "**/*.tsx",
